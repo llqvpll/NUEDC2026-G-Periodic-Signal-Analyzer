@@ -1,0 +1,23 @@
+; *************************************************************
+; *** AC6 Scatter-Loading Description File ***
+; *** 用于 AC6 编译器，包含外部SRAM和CCM区域定义 ***
+; *************************************************************
+
+LR_IROM1 0x08000000 0x00100000  {    ; load region size_region (Flash 1MB)
+  ER_IROM1 0x08000000 0x00100000  {  ; load address = execution address
+   *.o (RESET, +First)
+   *(InRoot$$Sections)
+   .ANY (+RO)
+   .ANY (+XO)
+  }
+  RW_CCM 0x10000000 0x00010000  {    ; CCM RAM 64KB (仅CPU可访问)
+   *.o (.ccm_malloc)               ; malloc 池 (G题已缩至32B)
+   *.o (.ccm_bss)                  ; CPU-only 信号处理缓冲 (app_gti/app_fft)
+  }
+  RW_IRAM1 0x20000000 0x00020000  {  ; RW data - 内部SRAM 128KB
+   .ANY (+RW +ZI)
+  }
+  RW_EXSRAM 0x68000000 0x00100000  { ; 外部SRAM 1MB (FSMC Bank3, NE3)
+   *.o (.ARM.__at_0x6800*)
+  }
+}

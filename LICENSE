@@ -1,0 +1,53 @@
+MIT License
+
+Copyright (c) 2026 llqvpll
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+## 第三方组件说明
+
+本仓库包含第三方代码，它们不在上述 MIT 授权范围内，遵循各自原始许可：
+
+1. **STM32F4 标准外设库（Standard Peripheral Library）**
+   - 位置：`firmware/_04_FWLib/`
+   - 版权：© STMicroelectronics
+   - 许可：ST 自有许可条款（随库分发）
+
+2. **STM32 USB 设备库 / 主机库 / OTG 驱动**
+   - 位置：`firmware/_08_USB/`
+   - 版权：© STMicroelectronics
+   - 许可：ST 自有许可条款
+
+3. **CMSIS 内核头文件与 CMSIS-DSP 静态库**
+   - 位置：`firmware/_02_Core/`（`core_cm4.h`、`arm_math.h`、`arm_cortexM4lf_math.lib` 等）
+   - 版权：© ARM Ltd.
+   - 许可：Apache-2.0（CMSIS 5 起）
+
+4. **LCD 驱动 / 字库 / 触摸部分**
+   - 位置：`firmware/_07_TFT_LCD/`
+   - 来源：正点原子（ALIENTEK）STM32 例程
+   - 许可：遵循正点原子随附许可条款
+
+5. **轻量任务调度与 UI 框架**
+   - 位置：`firmware/_05_Os/`
+   - 来源：基于正点原子例程修改
+
+如需将本仓库用于商业用途，请自行确认上述第三方组件的许可要求。

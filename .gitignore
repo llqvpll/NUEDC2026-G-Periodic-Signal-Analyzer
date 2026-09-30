@@ -1,0 +1,44 @@
+# Keil MDK 编译产物
+Output/
+Objects/
+Listings/
+*.axf
+*.o
+*.d
+*.map
+*.htm
+*.lnp
+*.dep
+*.build_log.htm
+*.lst
+*.sct.bak
+*.hex
+*.bin
+
+# Keil 用户 GUI 状态（含本机绝对路径，不应入库）
+*.uvguix
+*.uvguix.*
+*.uvoptx.bak
+
+# 调试器日志
+JLinkLog.txt
+JLinkSettings.ini
+
+# 备份与临时文件
+*.bak
+*.tmp
+*.log
+
+# Python
+__pycache__/
+*.pyc
+
+# 系统与编辑器
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# 不应入库的中间目录
+.uploads/
+.workbuddy/
