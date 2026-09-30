@@ -1,7 +1,9 @@
-# 电赛 G 题《周期信号测量分析装置》— STM32F407
+# 周期信号测量分析装置 · Periodic Signal Measurement & Analysis Device
+
+**2026 全国大学生电子设计竞赛（NUEDC）G 题** · NUEDC 2026 — Problem G
+主控 **STM32F407ZGTx** + AD9240 14bit 高速采集
 
 > 作者：llqvpll。
-> 全国大学生电子设计竞赛 2026 G 题《周期信号测量分析装置》的完整固件与设计文档。
 > 核心思路：**AD9240 高速采集 + STM32F407 数字域全处理**，模拟前端只做三件事：缓冲、低通、固定增益。
 
 ## 一句话方案
